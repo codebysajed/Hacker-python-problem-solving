@@ -1,18 +1,20 @@
 def minion(word):
-    vawel = ["a", "e", "i", "o", "u"]
-    kevin = 0
-    stuart = 0
+    vowels = ["a", "e", "i", "o", "u"]
+    kevin_score = 0
+    stuart_score = 0
 
     for i in range(len(word)):
-        if word[i] in vawel:
-            kevin += (len(word) - i)
+        if word[i] in vowels:
+            kevin_score += (len(word) - i)
         else:
             stuart += (len(word) - i )
 
-    if kevin > stuart:
-        print(f'kevin score { kevin}')
+    if kevin_score > stuart_score:
+        print(f'kevin score { kevin_score}')
+    elif stuart_score > kevin_score:
+        print(f'stuart score { stuart_score}')
     else:
-        print(f'stuart score { stuart}')
+        print('Drow')
 
 minion('banana')
 
